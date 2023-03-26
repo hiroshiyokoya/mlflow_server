@@ -1,0 +1,24 @@
+version: '3'
+services:
+  jupyterlab:
+    build:
+      dockerfile: env/Dockerfile
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8800-8899:8888"
+    networks: [ mlflow_net ]
+
+  mlflow:
+    build:
+      dockerfile: env/Dockerfile_mlflow
+    ports:
+      - "5001-5010:5000"
+    env_file:
+      - .env
+      - .azure_env
+    networks: [ mlflow_net ]
+
+networks:
+  mlflow_net:
+    driver: bridge

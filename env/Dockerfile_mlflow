@@ -1,0 +1,14 @@
+FROM python:3.10-slim
+
+RUN apt-get update && apt-get install -y libsqlite3-dev
+
+RUN pip install mlflow
+RUN pip install azure-storage-blob
+
+WORKDIR /usr/src/app
+
+COPY start_server.sh .
+
+EXPOSE 5000
+
+CMD ["sh", "./start_server.sh"]

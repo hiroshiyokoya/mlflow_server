@@ -1,0 +1,50 @@
+jedi
+jupyter
+notebook
+jupyterlab==3.*
+ipywidgets>=8.0.*
+ipykernel
+jupyterlab_theme_solarized_dark
+jupyter_contrib_nbextensions
+
+black
+isort
+jupyterlab_code_formatter
+
+pipdeptree
+pip-licenses
+pytest
+xlrd
+tqdm
+memory_profiler
+
+numpy
+pandas
+seaborn
+matplotlib
+japanize-matplotlib
+
+plotly
+# dash
+
+# scikit-image
+scikit-learn
+scipy
+
+# opencv-python
+# pydotplus
+# graphviz
+# imutils
+# Pillow
+# PyWavelets
+# pyradiomics
+
+# numba
+
+# fastcluster
+# hdbscan
+
+lightgbm
+optuna
+
+mlflow
